@@ -7,9 +7,9 @@ BLEP (Bigdata-based Living Lab Education Platform) contest of practicing big dat
 
 ## 📖 개요 (Description)
 
-1. [backend](#1.-Backend)
-2. [frontend](#2.-Frontend)
-3. [preprocessing](#3.-Preprocessing)
+1. [backend](#1-backend)
+2. [frontend](#2-frontend)
+3. [preprocessing](#3-preprocessing)
 
 ---
 
