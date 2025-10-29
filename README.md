@@ -33,13 +33,13 @@ Windows 기준
 
 ---
 ## 2. Frontend
-# environment
-### node.js = v22.16.0
-### build = Vite
-### react = 19.2.0
-### package manager = npm
+### environment
+node.js = v22.16.0
+build = Vite
+react = 19.2.0
+package manager = npm
 
-# To start
+### To start
 ```
 # 의존성 설치
 npm install
