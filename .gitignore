@@ -91,3 +91,9 @@ desktop.ini
 
 
 *.png
+
+# ========
+# node modules
+# ========
+
+node_modules/
