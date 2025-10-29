@@ -1,0 +1,141 @@
+/* ===== SymptomResult.js / Drug List Card ===== */
+.drug-summary-card {
+    display: block;
+    padding: 1rem 1.25rem; /* 16px 20px */
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 18px rgba(17, 24, 39, 0.06);
+    text-decoration: none;
+    color: var(--text);
+    transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  
+  /* 링크 기본 스타일 (보라색) 제거 */
+  .drug-summary-card:visited {
+    color: var(--text);
+  }
+  
+  .drug-summary-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(79, 70, 229, 0.4);
+    box-shadow: 0 8px 22px rgba(17, 24, 39, 0.1);
+  }
+  
+  /* 키보드 포커스 */
+  .drug-summary-card:focus-visible {
+    outline: none;
+    border-color: rgba(79, 70, 229, 0.5);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+  }
+  
+  .drug-summary-card .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .drug-summary-card .drug-name {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin: 0;
+  }
+  
+  .drug-summary-card .rating {
+    font-size: 14px;
+    font-weight: 600;
+    flex-shrink: 0; /* 이름이 길어도 줄어들지 않게 */
+  }
+  
+  .drug-summary-card .generic-name {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 4px 0 12px;
+    text-transform: capitalize;
+  }
+  
+  .drug-summary-card .review-counts {
+    display: flex;
+    gap: 1rem;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .review-counts .positive { color: var(--accent-2); } /* 긍정 (초록) */
+  .review-counts .negative { color: #ef4444; } /* 부정 (빨강) */
+  
+  @media (prefers-color-scheme: dark) {
+    .drug-summary-card {
+      background: var(--card-bg-dark);
+      border-color: var(--border-dark);
+      color: var(--text-dark);
+    }
+    .drug-summary-card:visited {
+      color: var(--text-dark);
+    }
+    .drug-summary-card:hover {
+      border-color: rgba(99, 102, 241, 0.5);
+    }
+    .drug-summary-card .generic-name {
+      color: var(--muted-dark);
+    }
+  }
+  
+  /* 페이지네이션 푸터 */
+  .pagination-footer {
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 1rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    .pagination-footer { color: var(--muted-dark); }
+  }
+
+
+/* ===== 페이지네이션 푸터 ===== */
+.pagination-footer {
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .pagination-footer button {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--card-bg);
+    color: var(--accent-1);
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+  }
+  
+  .pagination-footer button:hover:not(:disabled) {
+    background-color: rgba(238, 242, 255, 0.9); /* indigo-50 */
+  }
+  
+  .pagination-footer button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  @media (prefers-color-scheme: dark) {
+    .pagination-footer { color: var(--muted-dark); }
+    .pagination-footer button {
+      background: var(--card-bg-dark);
+      border-color: var(--border-dark);
+      color: #a5b4fc; /* indigo-300 */
+    }
+    .pagination-footer button:hover:not(:disabled) {
+      background: rgba(49, 46, 129, 0.3); /* indigo-900 */
+    }
+  }
